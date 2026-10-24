@@ -1,0 +1,10 @@
+*AI Frontiers Architecture Lab*
+Hybrid Search Engine
+
+Combine keyword and vector retrieval.
+
+Takeaway: Separate retrieval quality from answer verification; measure both.
+
+Repo: https://github.com/AIFrontiersLab/ai-frontiers-lab
+
+_peer-reviewed by AI. Review before publishing._

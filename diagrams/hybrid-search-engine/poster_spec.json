@@ -1,0 +1,68 @@
+{
+  "boxes": [
+    {
+      "detail": "Doc Chunking -> Keyword Indexing (ES) + Vector Embedding (FAISS/Milvus)",
+      "id": "ingestion",
+      "label": "Ingestion Pipeline"
+    },
+    {
+      "detail": "BM25 Search on Elasticsearch/OpenSearch",
+      "id": "lexical",
+      "label": "Lexical Retrieval"
+    },
+    {
+      "detail": "Vector Search on FAISS/Milvus",
+      "id": "semantic",
+      "label": "Semantic Retrieval"
+    },
+    {
+      "detail": "Z-score Normalization: Final_Score = w_lex*Z(BM25) + w_sem*Z(Vector)",
+      "id": "fusion",
+      "label": "Score Fusion"
+    },
+    {
+      "detail": "MMR Algorithm (lambda=0.7): Max Relevance - Similarity to selected",
+      "id": "rerank",
+      "label": "Diversity Reranking"
+    },
+    {
+      "detail": "Top-K diverse, deduplicated chunks",
+      "id": "output",
+      "label": "LLM Context"
+    }
+  ],
+  "flows": [
+    {
+      "from": "ingestion",
+      "label": "1. Index Keywords",
+      "to": "lexical"
+    },
+    {
+      "from": "ingestion",
+      "label": "2. Index Vectors",
+      "to": "semantic"
+    },
+    {
+      "from": "lexical",
+      "label": "3. BM25 Scores",
+      "to": "fusion"
+    },
+    {
+      "from": "semantic",
+      "label": "4. Vector Scores",
+      "to": "fusion"
+    },
+    {
+      "from": "fusion",
+      "label": "5. Fused Scores",
+      "to": "rerank"
+    },
+    {
+      "from": "rerank",
+      "label": "6. Final Context",
+      "to": "output"
+    }
+  ],
+  "subtitle": "One concept. Three AI perspectives. One tested architecture.",
+  "title": "Hybrid Search Engine"
+}

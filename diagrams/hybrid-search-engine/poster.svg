@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="100%" height="100%" fill="#0A1628"/>
+<text x="56" y="64" fill="#3D9BFF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">AI Frontiers Architecture Lab</text>
+<text x="56" y="120" fill="#F2F6FA" font-size="42" font-family="Arial, Helvetica, sans-serif" font-weight="700">Hybrid Search Engine</text>
+<text x="56" y="168" fill="#A8B8C8" font-size="22" font-family="Arial, Helvetica, sans-serif">One concept. Three AI perspectives. One tested architecture.</text>
+<rect x="48.0" y="280.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
+<text x="68.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Ingestion Pipeline</text>
+<text x="68.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Doc Chunking -&gt; Keyword Indexing</text>
+<text x="68.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">(ES) + Vector Embedding</text>
+<text x="68.0" y="410.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">(FAISS/Milvus)</text>
+<rect x="384.0" y="280.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
+<text x="404.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Lexical Retrieval</text>
+<text x="404.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">BM25 Search on</text>
+<text x="404.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Elasticsearch/OpenSearch</text>
+<rect x="720.0" y="280.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
+<text x="740.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Semantic Retrieval</text>
+<text x="740.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Vector Search on FAISS/Milvus</text>
+<rect x="48.0" y="524.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
+<text x="68.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Score Fusion</text>
+<text x="68.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Z-score Normalization: Final_Score =</text>
+<text x="68.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">w_lex*Z(BM25) + w_sem*Z(Vector)</text>
+<rect x="384.0" y="524.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
+<text x="404.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Diversity Reranking</text>
+<text x="404.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">MMR Algorithm (lambda=0.7): Max</text>
+<text x="404.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Relevance - Similarity to selected</text>
+<rect x="720.0" y="524.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
+<text x="740.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">LLM Context</text>
+<text x="740.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Top-K diverse, deduplicated chunks</text>
+<text x="56" y="1310" fill="#A8B8C8" font-size="16" font-family="Arial, Helvetica, sans-serif">Peer-reviewed by AI. Validation method disclosed. Review before publishing.</text>
+</svg>

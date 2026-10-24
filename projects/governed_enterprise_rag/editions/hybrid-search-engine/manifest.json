@@ -1,0 +1,15 @@
+{
+  "edition": "hybrid-search-engine",
+  "files": [
+    "projects/governed_enterprise_rag/editions/hybrid-search-engine/src/hybrid_search_engine/__init__.py",
+    "projects/governed_enterprise_rag/editions/hybrid-search-engine/src/hybrid_search_engine/pipeline.py",
+    "projects/governed_enterprise_rag/editions/hybrid-search-engine/src/hybrid_search_engine/config.py",
+    "projects/governed_enterprise_rag/editions/hybrid-search-engine/tests/test_hybrid_search_engine.py",
+    "projects/governed_enterprise_rag/editions/hybrid-search-engine/README.md",
+    "projects/governed_enterprise_rag/editions/hybrid-search-engine/examples/sample_request.json"
+  ],
+  "module": "hybrid_search_engine",
+  "planned_modules": [],
+  "planned_tests": [],
+  "project": "governed_enterprise_rag"
+}
