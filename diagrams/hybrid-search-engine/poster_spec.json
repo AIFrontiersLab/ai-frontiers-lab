@@ -1,68 +1,68 @@
 {
   "boxes": [
     {
-      "detail": "Doc Chunking -> Keyword Indexing (ES) + Vector Embedding (FAISS/Milvus)",
-      "id": "ingestion",
-      "label": "Ingestion Pipeline"
+      "detail": "Initial input from the user seeking information.",
+      "id": "1",
+      "label": "User Query"
     },
     {
-      "detail": "BM25 Search on Elasticsearch/OpenSearch",
-      "id": "lexical",
-      "label": "Lexical Retrieval"
+      "detail": "Lexical retrieval system using BM25 algorithm to score documents based on term frequency and inverse document frequency.",
+      "id": "2",
+      "label": "BM25 Index"
     },
     {
-      "detail": "Vector Search on FAISS/Milvus",
-      "id": "semantic",
-      "label": "Semantic Retrieval"
+      "detail": "Semantic retrieval system using vector embeddings to find similar documents based on context and meaning.",
+      "id": "3",
+      "label": "Vector Index"
     },
     {
-      "detail": "Z-score Normalization: Final_Score = w_lex*Z(BM25) + w_sem*Z(Vector)",
-      "id": "fusion",
-      "label": "Score Fusion"
+      "detail": "Combines scores from BM25 and Vector Index to create a unified ranking of documents.",
+      "id": "4",
+      "label": "Score Fusion Engine"
     },
     {
-      "detail": "MMR Algorithm (lambda=0.7): Max Relevance - Similarity to selected",
-      "id": "rerank",
-      "label": "Diversity Reranking"
+      "detail": "Maximal Marginal Relevance filter to enhance result diversity and reduce redundancy.",
+      "id": "5",
+      "label": "MMR Filter"
     },
     {
-      "detail": "Top-K diverse, deduplicated chunks",
-      "id": "output",
-      "label": "LLM Context"
+      "detail": "The curated list of documents presented to the user after processing.",
+      "id": "6",
+      "label": "Final Results"
     }
   ],
   "flows": [
     {
-      "from": "ingestion",
-      "label": "1. Index Keywords",
-      "to": "lexical"
+      "from": "1",
+      "label": "Lexical Retrieval",
+      "to": "2"
     },
     {
-      "from": "ingestion",
-      "label": "2. Index Vectors",
-      "to": "semantic"
+      "from": "1",
+      "label": "Semantic Retrieval",
+      "to": "3"
     },
     {
-      "from": "lexical",
-      "label": "3. BM25 Scores",
-      "to": "fusion"
+      "from": "2",
+      "label": "Score Integration",
+      "to": "4"
     },
     {
-      "from": "semantic",
-      "label": "4. Vector Scores",
-      "to": "fusion"
+      "from": "3",
+      "label": "Score Integration",
+      "to": "4"
     },
     {
-      "from": "fusion",
-      "label": "5. Fused Scores",
-      "to": "rerank"
+      "from": "4",
+      "label": "Diversity Control",
+      "to": "5"
     },
     {
-      "from": "rerank",
-      "label": "6. Final Context",
-      "to": "output"
+      "from": "5",
+      "label": "Present Results",
+      "to": "6"
     }
   ],
-  "subtitle": "One concept. Three AI perspectives. One tested architecture.",
+  "subtitle": "Parallel Retrieval with Post-Retrieval Fusion",
   "title": "Hybrid Search Engine"
 }

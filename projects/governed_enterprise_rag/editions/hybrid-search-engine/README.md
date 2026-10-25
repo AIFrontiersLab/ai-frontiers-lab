@@ -9,7 +9,7 @@ Combine keyword and vector retrieval.
 ## Design decisions
 
 - Chosen approach: Hybrid Search Engine
-- Certification: peer-reviewed by AI (certified)
+- Certification: peer-reviewed by AI (not certified)
 - Validation: External peer scores only (no self-scoring). Average of two anonymous reviews. Blockers for unsupported claims, fabricated references, critical security flaws. Model agreement alone does not certify correctness.
 
 ## Components

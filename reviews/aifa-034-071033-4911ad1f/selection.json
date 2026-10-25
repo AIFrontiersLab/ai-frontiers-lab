@@ -1,0 +1,57 @@
+{
+  "certification": "peer-reviewed by AI",
+  "certified": true,
+  "disclaimer": "Model agreement alone cannot certify correctness. Selection uses external peer scores, correctness gates, and validation checks disclosed in the review report.",
+  "method": "External peer scores only (no self-scoring). Average of two anonymous reviews. Blockers for unsupported claims, fabricated references, critical security flaws. Model agreement alone does not certify correctness.",
+  "needs_adjudication": false,
+  "tallies": [
+    {
+      "average_score": 0.8512,
+      "blocked": true,
+      "blockers": [
+        "unsupported_performance_claims",
+        "unsupported_performance_claims"
+      ],
+      "candidate_id": "C1",
+      "correctness_disagreement": false,
+      "correctness_ok": false,
+      "review_count": 2,
+      "review_scores": [
+        0.8549999999999999,
+        0.8475
+      ]
+    },
+    {
+      "average_score": 0.0,
+      "blocked": true,
+      "blockers": [
+        "unsupported_performance_claims",
+        "critical_security_flaws",
+        "unsupported_performance_claims",
+        "critical_security_flaws"
+      ],
+      "candidate_id": "C2",
+      "correctness_disagreement": false,
+      "correctness_ok": false,
+      "review_count": 2,
+      "review_scores": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "average_score": 0.85,
+      "blocked": false,
+      "blockers": [],
+      "candidate_id": "C3",
+      "correctness_disagreement": false,
+      "correctness_ok": true,
+      "review_count": 2,
+      "review_scores": [
+        0.87,
+        0.83
+      ]
+    }
+  ],
+  "winner_id": "C3"
+}

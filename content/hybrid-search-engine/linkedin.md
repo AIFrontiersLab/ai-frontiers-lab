@@ -1,16 +1,12 @@
-Why your Hybrid Search Engine pipeline can retrieve the right document and still fail.
+🚀 Hybrid Search isn't just BM25 + Vector. It's BM25 + Vector + Diversity Control.
 
-Most teams debug the generator first. The stronger move is to inspect each stage: query formation, hybrid retrieval, fusion, context assembly and claim verification.
+Most RAG implementations fail because they naively sum scores, resulting in redundant top-k results. I've built a reference architecture using Weighted Score Fusion + MMR to ensure every chunk in your context window adds unique value.
 
-In this edition of AI Frontiers Architecture Lab we compare three designs, peer-review them across OpenAI, Anthropic and Grok and ship a tested reference slice.
+✅ Lexical precision for exact matches
+✅ Semantic breadth for paraphrases
+✅ MMR to kill redundancy
 
-Trade-off: a componentized pipeline costs more wiring, but failure modes become measurable.
-
-Practical takeaway: log evidence ids with every answer and block generation when evidence is thin.
-
-#AIArchitecture #RAG #EnterpriseAI #SystemsDesign #AIEngineering
-
-(MOCK draft via refine. Review before publishing.)
+Stop letting your RAG repeat itself. #RAG #AI #Search #Engineering
 
 Reference implementation: https://github.com/AIFrontiersLab/ai-frontiers-lab
 

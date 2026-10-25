@@ -1,30 +1,30 @@
 flowchart LR
-  ingestion["Ingestion Pipeline"]
-  lexical["Lexical Retrieval"]
-  semantic["Semantic Retrieval"]
-  fusion["Score Fusion"]
-  rerank["Diversity Reranking"]
-  output["LLM Context"]
-  ingestion -->|1. Index Keywords| lexical
-  ingestion -->|2. Index Vectors| semantic
-  lexical -->|3. BM25 Scores| fusion
-  semantic -->|4. Vector Scores| fusion
-  fusion -->|5. Fused Scores| rerank
-  rerank -->|6. Final Context| output
+  1["User Query"]
+  2["BM25 Index"]
+  3["Vector Index"]
+  4["Score Fusion Engine"]
+  5["MMR Filter"]
+  6["Final Results"]
+  1 -->|Lexical Retrieval| 2
+  1 -->|Semantic Retrieval| 3
+  2 -->|Score Integration| 4
+  3 -->|Score Integration| 4
+  4 -->|Diversity Control| 5
+  5 -->|Present Results| 6
 
 flowchart TB
   subgraph happy [Happy path]
-    h_ingestion["Ingestion Pipeline"]
-    h_lexical["Lexical Retrieval"]
-    h_semantic["Semantic Retrieval"]
-    h_fusion["Score Fusion"]
-    h_rerank["Diversity Reranking"]
-    h_output["LLM Context"]
-    h_ingestion --> h_lexical
-    h_lexical --> h_semantic
-    h_semantic --> h_fusion
-    h_fusion --> h_rerank
-    h_rerank --> h_output
+    h_1["User Query"]
+    h_2["BM25 Index"]
+    h_3["Vector Index"]
+    h_4["Score Fusion Engine"]
+    h_5["MMR Filter"]
+    h_6["Final Results"]
+    h_1 --> h_2
+    h_2 --> h_3
+    h_3 --> h_4
+    h_4 --> h_5
+    h_5 --> h_6
   end
   fail["Failure / abstain"]
-  h_output -.-> fail
+  h_6 -.-> fail
