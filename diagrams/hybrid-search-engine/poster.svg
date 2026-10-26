@@ -2,37 +2,30 @@
 <rect width="100%" height="100%" fill="#0A1628"/>
 <text x="56" y="64" fill="#3D9BFF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">AI Frontiers Architecture Lab</text>
 <text x="56" y="120" fill="#F2F6FA" font-size="42" font-family="Arial, Helvetica, sans-serif" font-weight="700">Hybrid Search Engine</text>
-<text x="56" y="168" fill="#A8B8C8" font-size="22" font-family="Arial, Helvetica, sans-serif">Parallel Retrieval with Post-Retrieval Fusion</text>
+<text x="56" y="168" fill="#A8B8C8" font-size="22" font-family="Arial, Helvetica, sans-serif">One concept. Three AI perspectives. One tested architecture.</text>
 <rect x="48.0" y="280.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="68.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">User Query</text>
-<text x="68.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Initial input from the user seeking</text>
-<text x="68.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">information.</text>
+<text x="68.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Query Input</text>
+<text x="68.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">User submits search query.</text>
 <rect x="384.0" y="280.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="404.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">BM25 Index</text>
-<text x="404.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Lexical retrieval system using BM25</text>
-<text x="404.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">algorithm to score documents based</text>
-<text x="404.0" y="410.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">on term frequency and inverse</text>
-<text x="404.0" y="436.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">document frequency.</text>
+<text x="404.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Lexical Path</text>
+<text x="404.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Processes query using BM25 Index to</text>
+<text x="404.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">retrieve Top-K Lexical Results.</text>
 <rect x="720.0" y="280.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="740.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Vector Index</text>
-<text x="740.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Semantic retrieval system using</text>
-<text x="740.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">vector embeddings to find similar</text>
-<text x="740.0" y="410.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">documents based on context and</text>
-<text x="740.0" y="436.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">meaning.</text>
+<text x="740.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Dense Path</text>
+<text x="740.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Transforms query into vector using</text>
+<text x="740.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Embedding Model, then retrieves</text>
+<text x="740.0" y="410.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Top-K Dense Results via HNSW Index.</text>
 <rect x="48.0" y="524.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="68.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Score Fusion Engine</text>
-<text x="68.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Combines scores from BM25 and Vector</text>
-<text x="68.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Index to create a unified ranking of</text>
-<text x="68.0" y="654.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">documents.</text>
+<text x="68.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Fusion</text>
+<text x="68.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Combines results from both paths</text>
+<text x="68.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">using Reciprocal Rank Fusion (RRF).</text>
 <rect x="384.0" y="524.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="404.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">MMR Filter</text>
-<text x="404.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Maximal Marginal Relevance filter to</text>
-<text x="404.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">enhance result diversity and reduce</text>
-<text x="404.0" y="654.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">redundancy.</text>
+<text x="404.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Reranking (Optional)</text>
+<text x="404.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Applies Cross-Encoder on Top-N fused</text>
+<text x="404.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">results for enhanced ranking.</text>
 <rect x="720.0" y="524.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="740.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Final Results</text>
-<text x="740.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">The curated list of documents</text>
-<text x="740.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">presented to the user after</text>
-<text x="740.0" y="654.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">processing.</text>
+<text x="740.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Output</text>
+<text x="740.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Delivers the Final Ranked List to</text>
+<text x="740.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">the user.</text>
 <text x="56" y="1310" fill="#A8B8C8" font-size="16" font-family="Arial, Helvetica, sans-serif">Peer-reviewed by AI. Validation method disclosed. Review before publishing.</text>
 </svg>

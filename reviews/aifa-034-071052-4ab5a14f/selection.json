@@ -1,0 +1,44 @@
+{
+  "certification": "peer-reviewed by AI",
+  "certified": false,
+  "disclaimer": "Model agreement alone cannot certify correctness. Selection uses external peer scores, correctness gates, and validation checks disclosed in the review report.",
+  "method": "External peer scores only (no self-scoring). Average of two anonymous reviews. Blockers for unsupported claims, fabricated references, critical security flaws. Model agreement alone does not certify correctness.",
+  "needs_adjudication": false,
+  "tallies": [
+    {
+      "average_score": 0.0,
+      "blocked": false,
+      "blockers": [],
+      "candidate_id": "C1",
+      "correctness_disagreement": false,
+      "correctness_ok": false,
+      "review_count": 0,
+      "review_scores": []
+    },
+    {
+      "average_score": 0.0,
+      "blocked": false,
+      "blockers": [],
+      "candidate_id": "C2",
+      "correctness_disagreement": false,
+      "correctness_ok": false,
+      "review_count": 1,
+      "review_scores": [
+        0.0
+      ]
+    },
+    {
+      "average_score": 0.0,
+      "blocked": false,
+      "blockers": [],
+      "candidate_id": "C3",
+      "correctness_disagreement": false,
+      "correctness_ok": false,
+      "review_count": 1,
+      "review_scores": [
+        0.0
+      ]
+    }
+  ],
+  "winner_id": "C1"
+}

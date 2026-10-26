@@ -1,68 +1,73 @@
 {
   "boxes": [
     {
-      "detail": "Initial input from the user seeking information.",
+      "detail": "User submits search query.",
       "id": "1",
-      "label": "User Query"
+      "label": "Query Input"
     },
     {
-      "detail": "Lexical retrieval system using BM25 algorithm to score documents based on term frequency and inverse document frequency.",
+      "detail": "Processes query using BM25 Index to retrieve Top-K Lexical Results.",
       "id": "2",
-      "label": "BM25 Index"
+      "label": "Lexical Path"
     },
     {
-      "detail": "Semantic retrieval system using vector embeddings to find similar documents based on context and meaning.",
+      "detail": "Transforms query into vector using Embedding Model, then retrieves Top-K Dense Results via HNSW Index.",
       "id": "3",
-      "label": "Vector Index"
+      "label": "Dense Path"
     },
     {
-      "detail": "Combines scores from BM25 and Vector Index to create a unified ranking of documents.",
+      "detail": "Combines results from both paths using Reciprocal Rank Fusion (RRF).",
       "id": "4",
-      "label": "Score Fusion Engine"
+      "label": "Fusion"
     },
     {
-      "detail": "Maximal Marginal Relevance filter to enhance result diversity and reduce redundancy.",
+      "detail": "Applies Cross-Encoder on Top-N fused results for enhanced ranking.",
       "id": "5",
-      "label": "MMR Filter"
+      "label": "Reranking (Optional)"
     },
     {
-      "detail": "The curated list of documents presented to the user after processing.",
+      "detail": "Delivers the Final Ranked List to the user.",
       "id": "6",
-      "label": "Final Results"
+      "label": "Output"
     }
   ],
   "flows": [
     {
       "from": "1",
-      "label": "Lexical Retrieval",
+      "label": "Query -> Lexical Path",
       "to": "2"
     },
     {
       "from": "1",
-      "label": "Semantic Retrieval",
+      "label": "Query -> Dense Path",
       "to": "3"
     },
     {
       "from": "2",
-      "label": "Score Integration",
+      "label": "Top-K Lexical Results",
       "to": "4"
     },
     {
       "from": "3",
-      "label": "Score Integration",
+      "label": "Top-K Dense Results",
       "to": "4"
     },
     {
       "from": "4",
-      "label": "Diversity Control",
+      "label": "Fused Results",
       "to": "5"
     },
     {
       "from": "5",
-      "label": "Present Results",
+      "label": "Reranked Results",
+      "to": "6"
+    },
+    {
+      "from": "4",
+      "label": "Fused Results (if reranking is skipped)",
       "to": "6"
     }
   ],
-  "subtitle": "Parallel Retrieval with Post-Retrieval Fusion",
+  "subtitle": "One concept. Three AI perspectives. One tested architecture.",
   "title": "Hybrid Search Engine"
 }

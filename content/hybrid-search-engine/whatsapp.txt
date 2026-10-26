@@ -3,7 +3,7 @@ Hybrid Search Engine
 
 Combine keyword and vector retrieval.
 
-Takeaway: Hybrid search is not a silver bullet; it is a balancing act. The critical engineering insight is that fusion without diversity control leads to information collapse. MMR is the necessary third component to make hybrid retrieval truly effective and Z-score normalization ensures robust score fusion across different retriever distributions.
+Takeaway: Hybrid search is not just about adding vector search to keyword search; it's about intelligently fusing their strengths. Score Fusion provides a robust baseline for combining lexical and semantic signals, while Diversity Control (MMR) is essential to prevent the 'echo chamber' effect of redundant results. This architecture offers the best balance of accuracy and performance for enterprise applications.
 
 Repo: https://github.com/AIFrontiersLab/ai-frontiers-lab
 

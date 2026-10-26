@@ -1,13 +1,11 @@
-🚀 Hybrid Search isn't just BM25 + Vector. It's BM25 + Vector + Diversity Control.
+🚀 Launching our Hybrid Search Engine!
 
-Most RAG implementations fail because they naively sum scores, resulting in redundant top-k results. I've built a reference architecture using Weighted Score Fusion + MMR to ensure every chunk in your context window adds unique value.
+We solved the classic RAG dilemma: BM25 is great for exact matches, but Vector Search wins on semantics. Why choose one when you can have both?
 
-✅ Lexical precision for exact matches
-✅ Semantic breadth for paraphrases
-✅ MMR to kill redundancy
+Our architecture uses **Score Fusion** to combine keyword and vector results, paired with **Maximal Marginal Relevance (MMR)** to kill redundancy. The result? Higher precision, better recall and a cleaner user experience.
 
-Stop letting your RAG repeat itself. #RAG #AI #Search #Engineering
+Check out the full technical breakdown on how we balanced these trade-offs in our 'From RAG to Governed Enterprise Agents' series. 👇
+
+#AI #SearchEngine #RAG #HybridSearch #MachineLearning #Engineering
 
 Reference implementation: https://github.com/AIFrontiersLab/ai-frontiers-lab
-
-This edition is peer-reviewed by AI. Validation method: external anonymous peer scores, correctness gates, and disclosed tests. Model agreement alone does not certify correctness.

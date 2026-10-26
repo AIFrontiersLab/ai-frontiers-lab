@@ -1,25 +1,26 @@
 flowchart LR
-  1["User Query"]
-  2["BM25 Index"]
-  3["Vector Index"]
-  4["Score Fusion Engine"]
-  5["MMR Filter"]
-  6["Final Results"]
-  1 -->|Lexical Retrieval| 2
-  1 -->|Semantic Retrieval| 3
-  2 -->|Score Integration| 4
-  3 -->|Score Integration| 4
-  4 -->|Diversity Control| 5
-  5 -->|Present Results| 6
+  1["Query Input"]
+  2["Lexical Path"]
+  3["Dense Path"]
+  4["Fusion"]
+  5["Reranking (Optional)"]
+  6["Output"]
+  1 -->|Query -> Lexical Path| 2
+  1 -->|Query -> Dense Path| 3
+  2 -->|Top-K Lexical Results| 4
+  3 -->|Top-K Dense Results| 4
+  4 -->|Fused Results| 5
+  5 -->|Reranked Results| 6
+  4 -->|Fused Results (if reranking is skipped)| 6
 
 flowchart TB
   subgraph happy [Happy path]
-    h_1["User Query"]
-    h_2["BM25 Index"]
-    h_3["Vector Index"]
-    h_4["Score Fusion Engine"]
-    h_5["MMR Filter"]
-    h_6["Final Results"]
+    h_1["Query Input"]
+    h_2["Lexical Path"]
+    h_3["Dense Path"]
+    h_4["Fusion"]
+    h_5["Reranking (Optional)"]
+    h_6["Output"]
     h_1 --> h_2
     h_2 --> h_3
     h_3 --> h_4
