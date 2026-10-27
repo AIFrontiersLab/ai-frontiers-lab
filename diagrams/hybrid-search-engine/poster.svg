@@ -4,28 +4,30 @@
 <text x="56" y="120" fill="#F2F6FA" font-size="42" font-family="Arial, Helvetica, sans-serif" font-weight="700">Hybrid Search Engine</text>
 <text x="56" y="168" fill="#A8B8C8" font-size="22" font-family="Arial, Helvetica, sans-serif">One concept. Three AI perspectives. One tested architecture.</text>
 <rect x="48.0" y="280.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="68.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Query Input</text>
-<text x="68.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">User submits search query.</text>
+<text x="68.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">User Query</text>
+<text x="68.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Initial search query input by the</text>
+<text x="68.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">user.</text>
 <rect x="384.0" y="280.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="404.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Lexical Path</text>
-<text x="404.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Processes query using BM25 Index to</text>
-<text x="404.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">retrieve Top-K Lexical Results.</text>
+<text x="404.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Query Analyzer</text>
+<text x="404.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Parses the query into keywords and</text>
+<text x="404.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">embeddings.</text>
 <rect x="720.0" y="280.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="740.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Dense Path</text>
-<text x="740.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Transforms query into vector using</text>
-<text x="740.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Embedding Model, then retrieves</text>
-<text x="740.0" y="410.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Top-K Dense Results via HNSW Index.</text>
+<text x="740.0" y="320.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">BM25 Retriever</text>
+<text x="740.0" y="358.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Retrieves documents based on keyword</text>
+<text x="740.0" y="384.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">matching using BM25 algorithm.</text>
 <rect x="48.0" y="524.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="68.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Fusion</text>
-<text x="68.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Combines results from both paths</text>
-<text x="68.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">using Reciprocal Rank Fusion (RRF).</text>
+<text x="68.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">ANN Retriever</text>
+<text x="68.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Retrieves documents based on</text>
+<text x="68.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">semantic similarity using</text>
+<text x="68.0" y="654.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">approximate nearest neighbors.</text>
 <rect x="384.0" y="524.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="404.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Reranking (Optional)</text>
-<text x="404.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Applies Cross-Encoder on Top-N fused</text>
-<text x="404.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">results for enhanced ranking.</text>
+<text x="404.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">RRF Fusion Engine</text>
+<text x="404.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Merges and ranks results from BM25</text>
+<text x="404.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">and ANN retrievers using Reciprocal</text>
+<text x="404.0" y="654.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Rank Fusion.</text>
 <rect x="720.0" y="524.0" width="312.0" height="220.0" rx="16" fill="#132A45" stroke="#3D9BFF" stroke-width="3"/>
-<text x="740.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Output</text>
-<text x="740.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Delivers the Final Ranked List to</text>
-<text x="740.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">the user.</text>
+<text x="740.0" y="564.0" fill="#3D9BFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">Cross-Encoder Reranker</text>
+<text x="740.0" y="602.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">Optionally refines the top-K results</text>
+<text x="740.0" y="628.0" fill="#F2F6FA" font-size="18" font-family="Arial, Helvetica, sans-serif">for improved relevance.</text>
 <text x="56" y="1310" fill="#A8B8C8" font-size="16" font-family="Arial, Helvetica, sans-serif">Peer-reviewed by AI. Validation method disclosed. Review before publishing.</text>
 </svg>

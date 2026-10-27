@@ -3,7 +3,7 @@ Hybrid Search Engine
 
 Combine keyword and vector retrieval.
 
-Takeaway: Hybrid search is not just about adding vector search to keyword search; it's about intelligently fusing their strengths. Score Fusion provides a robust baseline for combining lexical and semantic signals, while Diversity Control (MMR) is essential to prevent the 'echo chamber' effect of redundant results. This architecture offers the best balance of accuracy and performance for enterprise applications.
+Takeaway: Hybrid search is not merely a feature; it is a necessity for robust enterprise retrieval. Lexical matching ensures precision for exact terms and IDs, while dense retrieval captures semantic intent. By using Reciprocal Rank Fusion (RRF), we combine these strengths without the fragility of score normalization. The architecture prioritizes resilience (graceful degradation) and observability (strict versioning), ensuring that the system remains reliable even when individual components fail or drift.
 
 Repo: https://github.com/AIFrontiersLab/ai-frontiers-lab
 

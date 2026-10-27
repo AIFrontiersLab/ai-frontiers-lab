@@ -1,11 +1,28 @@
-🚀 Launching our Hybrid Search Engine!
+🚀 Why your RAG pipeline is missing 30% of relevant answers.
 
-We solved the classic RAG dilemma: BM25 is great for exact matches, but Vector Search wins on semantics. Why choose one when you can have both?
+Most developers choose between Keyword Search (BM25) or Vector Search (Embeddings). But in enterprise contexts, this is a false dichotomy.
 
-Our architecture uses **Score Fusion** to combine keyword and vector results, paired with **Maximal Marginal Relevance (MMR)** to kill redundancy. The result? Higher precision, better recall and a cleaner user experience.
+🔍 Keyword Search wins on:
+- Exact matches (IDs, SKUs, Acronyms)
+- Rare tokens
+- Precision on specific terms
 
-Check out the full technical breakdown on how we balanced these trade-offs in our 'From RAG to Governed Enterprise Agents' series. 👇
+🧠 Vector Search wins on:
+- Semantic understanding
+- Paraphrasing
+- Conceptual similarity
 
-#AI #SearchEngine #RAG #HybridSearch #MachineLearning #Engineering
+The solution? Hybrid Search.
+
+In our latest architecture for 'Governed Enterprise Agents', we implemented a componentized pipeline that runs both in parallel. We use Reciprocal Rank Fusion (RRF) to merge results because it’s robust and doesn’t require normalizing incompatible score scales (BM25 vs. Cosine).
+
+Key engineering wins:
+✅ Graceful degradation if one index fails.
+✅ Strict embedding versioning to prevent drift.
+✅ Measurable gains in Recall@10 on BEIR benchmarks.
+
+Don't guess. Measure. Hybrid search isn't just 'nice to have', it's the baseline for production-grade RAG.
+
+#RAG #AI #Search #Engineering #LLM #HybridSearch
 
 Reference implementation: https://github.com/AIFrontiersLab/ai-frontiers-lab

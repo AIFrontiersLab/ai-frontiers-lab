@@ -1,0 +1,47 @@
+{
+  "certification": "peer-reviewed by AI",
+  "certified": false,
+  "disclaimer": "Model agreement alone cannot certify correctness. Selection uses external peer scores, correctness gates, and validation checks disclosed in the review report.",
+  "method": "External peer scores only (no self-scoring). Average of two anonymous reviews. Blockers for unsupported claims, fabricated references, critical security flaws. Model agreement alone does not certify correctness.",
+  "needs_adjudication": false,
+  "tallies": [
+    {
+      "average_score": 0.0,
+      "blocked": false,
+      "blockers": [],
+      "candidate_id": "C1",
+      "correctness_disagreement": false,
+      "correctness_ok": false,
+      "review_count": 0,
+      "review_scores": []
+    },
+    {
+      "average_score": 0.0,
+      "blocked": false,
+      "blockers": [],
+      "candidate_id": "C2",
+      "correctness_disagreement": false,
+      "correctness_ok": false,
+      "review_count": 1,
+      "review_scores": [
+        0.0
+      ]
+    },
+    {
+      "average_score": 0.0138,
+      "blocked": true,
+      "blockers": [
+        "incomplete_submission: approaches, architecture, implementation_plan, linkedin_post, takeaway and notes are all empty. There is no reviewable content beyond a one-line problem statement and a two-word 'chosen' label. This is not one of the three mandated blocker categories, but it is added as a reviewer-judgment blocker because the candidate cannot be evaluated against any rubric item."
+      ],
+      "candidate_id": "C3",
+      "correctness_disagreement": false,
+      "correctness_ok": false,
+      "review_count": 2,
+      "review_scores": [
+        0.027500000000000004,
+        0.0
+      ]
+    }
+  ],
+  "winner_id": "C3"
+}

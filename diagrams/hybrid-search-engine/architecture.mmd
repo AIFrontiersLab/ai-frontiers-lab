@@ -1,31 +1,34 @@
 flowchart LR
-  1["Query Input"]
-  2["Lexical Path"]
-  3["Dense Path"]
-  4["Fusion"]
-  5["Reranking (Optional)"]
-  6["Output"]
-  1 -->|Query -> Lexical Path| 2
-  1 -->|Query -> Dense Path| 3
-  2 -->|Top-K Lexical Results| 4
-  3 -->|Top-K Dense Results| 4
-  4 -->|Fused Results| 5
-  5 -->|Reranked Results| 6
-  4 -->|Fused Results (if reranking is skipped)| 6
+  1["User Query"]
+  2["Query Analyzer"]
+  3["BM25 Retriever"]
+  4["ANN Retriever"]
+  5["RRF Fusion Engine"]
+  6["Cross-Encoder Reranker"]
+  7["Final Results"]
+  1 -->|1. Parse Query| 2
+  2 -->|2. Send Keywords| 3
+  2 -->|2. Send Embeddings| 4
+  3 -->|3. Return Top-N Docs| 5
+  4 -->|3. Return Top-N Docs| 5
+  5 -->|4. Merge and Rank| 6
+  6 -->|5. Refine Top-K| 7
+  5 -->|5. Direct to Results| 7
 
 flowchart TB
   subgraph happy [Happy path]
-    h_1["Query Input"]
-    h_2["Lexical Path"]
-    h_3["Dense Path"]
-    h_4["Fusion"]
-    h_5["Reranking (Optional)"]
-    h_6["Output"]
+    h_1["User Query"]
+    h_2["Query Analyzer"]
+    h_3["BM25 Retriever"]
+    h_4["ANN Retriever"]
+    h_5["RRF Fusion Engine"]
+    h_6["Cross-Encoder Reranker"]
     h_1 --> h_2
     h_2 --> h_3
     h_3 --> h_4
     h_4 --> h_5
     h_5 --> h_6
+    h_6 --> h_7
   end
   fail["Failure / abstain"]
-  h_6 -.-> fail
+  h_7 -.-> fail

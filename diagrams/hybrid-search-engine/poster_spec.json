@@ -1,71 +1,81 @@
 {
   "boxes": [
     {
-      "detail": "User submits search query.",
+      "detail": "Initial search query input by the user.",
       "id": "1",
-      "label": "Query Input"
+      "label": "User Query"
     },
     {
-      "detail": "Processes query using BM25 Index to retrieve Top-K Lexical Results.",
+      "detail": "Parses the query into keywords and embeddings.",
       "id": "2",
-      "label": "Lexical Path"
+      "label": "Query Analyzer"
     },
     {
-      "detail": "Transforms query into vector using Embedding Model, then retrieves Top-K Dense Results via HNSW Index.",
+      "detail": "Retrieves documents based on keyword matching using BM25 algorithm.",
       "id": "3",
-      "label": "Dense Path"
+      "label": "BM25 Retriever"
     },
     {
-      "detail": "Combines results from both paths using Reciprocal Rank Fusion (RRF).",
+      "detail": "Retrieves documents based on semantic similarity using approximate nearest neighbors.",
       "id": "4",
-      "label": "Fusion"
+      "label": "ANN Retriever"
     },
     {
-      "detail": "Applies Cross-Encoder on Top-N fused results for enhanced ranking.",
+      "detail": "Merges and ranks results from BM25 and ANN retrievers using Reciprocal Rank Fusion.",
       "id": "5",
-      "label": "Reranking (Optional)"
+      "label": "RRF Fusion Engine"
     },
     {
-      "detail": "Delivers the Final Ranked List to the user.",
+      "detail": "Optionally refines the top-K results for improved relevance.",
       "id": "6",
-      "label": "Output"
+      "label": "Cross-Encoder Reranker"
+    },
+    {
+      "detail": "Returns the refined and ranked search results to the user.",
+      "id": "7",
+      "label": "Final Results"
     }
   ],
   "flows": [
     {
       "from": "1",
-      "label": "Query -> Lexical Path",
+      "label": "1. Parse Query",
       "to": "2"
     },
     {
-      "from": "1",
-      "label": "Query -> Dense Path",
+      "from": "2",
+      "label": "2. Send Keywords",
       "to": "3"
     },
     {
       "from": "2",
-      "label": "Top-K Lexical Results",
+      "label": "2. Send Embeddings",
       "to": "4"
     },
     {
       "from": "3",
-      "label": "Top-K Dense Results",
-      "to": "4"
+      "label": "3. Return Top-N Docs",
+      "to": "5"
     },
     {
       "from": "4",
-      "label": "Fused Results",
+      "label": "3. Return Top-N Docs",
       "to": "5"
     },
     {
       "from": "5",
-      "label": "Reranked Results",
+      "label": "4. Merge and Rank",
       "to": "6"
     },
     {
-      "from": "4",
-      "label": "Fused Results (if reranking is skipped)",
-      "to": "6"
+      "from": "6",
+      "label": "5. Refine Top-K",
+      "to": "7"
+    },
+    {
+      "from": "5",
+      "label": "5. Direct to Results",
+      "to": "7"
     }
   ],
   "subtitle": "One concept. Three AI perspectives. One tested architecture.",
